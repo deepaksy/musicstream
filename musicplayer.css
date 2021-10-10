@@ -1,0 +1,138 @@
+.aside_player{
+    position: fixed;
+    bottom: 0;
+    background-color: whitesmoke;
+    width: 100%;
+    display: none;
+    align-items: center;
+    background-color: var(--navbarColor);
+    color: var(--textColor);
+    transition: all 1s ease-in;
+}
+
+.list-data{
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    /*margin: 5px;*/
+    font-size: large;
+    font-family: monospace;
+    cursor: pointer;
+    /*width: 95%;*/
+    margin-right: 10%;
+    margin-left: 10%;
+    border-top: 0.1px solid whitesmoke;
+    border-bottom: 0.1px solid whitesmoke;
+}
+
+.list-data:hover{
+    background-color: #565656;
+    color: whitesmoke;
+}
+#playlistdata{
+    padding: 1px;
+    margin-bottom: 15vh;
+}
+.musicplayer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.musicplayer i{
+    font-size: 35px;
+    padding: 12px;
+}
+
+.music-logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+.seekbar{
+    width: 100%;
+    position: absolute;
+    background-color: red;
+    height: 1.8px;
+    top: 0;
+}
+
+.seekbar:hover{
+    height: 8px;
+    top: -2;
+}
+
+.progress_div{
+    width: 100%;
+    height: inherit;
+    box-shadow: 0 1px 2px #717171;
+    border-radius: 4rem;
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    transition: width 1s linear;
+}
+.progress{
+    position: absolute;
+    width: 0%;
+    height:inherit;
+    background-color: #454545;
+    box-shadow: 0 1px 2px #212121;
+    border-radius: 4rem;
+    transition: all 1s linear;
+    
+}
+
+.progress:hover{
+    height: 3.6px;
+}
+
+.duration{
+    border-radius: 999px;
+    padding: 12px;
+    border: 1px solid whitesmoke;
+}
+
+#musicinfo{
+    display: flex;
+    align-items: center;
+}
+
+#artist{
+    margin: 0;overflow: hidden;width: 120px;white-space: nowrap;text-overflow: ellipsis;
+}
+@media only screen and (max-width:560px){
+    .musicplayer{
+        justify-content: space-between;
+        width: 100%;
+    }
+    #previous{
+        display: none;
+    }
+    
+    
+    .duration{
+        padding: 6px;
+        display: flex;
+    }
+
+    .songmetadata{
+        margin: 5px;
+    }
+    .songtimer{
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    #next{
+        display: none;
+    }
+
+    #artist{
+        width: 120px;
+    }
+
+}

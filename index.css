@@ -1,0 +1,214 @@
+[data-theme="light"]{
+    --backgroundColor:white;
+    --textColor:black;
+    --navbarColor:whitesmoke;
+    --navbarshadow:#232323;
+}
+
+[data-theme="dark"]{
+    --backgroundColor:#181818;
+    --textColor:whitesmoke;
+    --navbarColor:#212121;
+    --navbarshadow:#434343;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    transition: background-color 0.5s ease-in , color 1.5s ease-in-out;
+    margin: 0%;
+    padding: 0%;
+}
+
+#themeswitch{
+    cursor: pointer;
+    user-select: none;
+    width: max-content;
+    padding:20px;
+}
+
+#themeAlert{
+    display: none;
+}
+
+
+
+
+header{
+    margin:0;
+    transition:1s;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    background-color: var(--navbarColor);
+    box-shadow: 1px 0px 22px 5px var(--navbarshadow);
+}
+section{
+    margin:0;
+}
+.navbar{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.navbar-left{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.navbar-left > ul >li >a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.navbar-right{
+    position: absolute;
+    right: 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+/*Songsearch bar styling*/
+
+.inputbox{
+    padding: 10px 18px;
+    font-size: 14px;
+    font-family: monospace;
+    width: 50ch;
+    display: block;
+    margin-left: 12px;
+    border-radius: 999px;
+    border: 1px solid wheat;
+    outline: none;
+}
+
+#searchsong{
+    padding: 10px 18px;
+    font-size: 14px;
+    font-family: monospace;
+    width: 100%;
+    display: block;
+    border: 1px solid wheat;
+    outline: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.searchbar{
+    width: 50ch;
+    align-items: center;
+    position: relative;
+}
+
+
+.inputbox{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0 10px;
+    flex: 1;
+    cursor: text;
+    color: #8e8e93;
+    font-size: 12px;
+}
+
+.searchwrap{
+    position:absolute;
+    border-radius: 5px;
+    top:0;
+    width: 100%;
+    display: none;
+    background-color: whitesmoke;
+    color: #181818;
+    z-index: 9;
+    transition: all 1s ease;
+}
+
+#playlistsearch{
+    padding: auto;
+}
+select{
+    padding: 10px;
+    background-color: var(--navbarColor);
+    border-radius: 21px;
+    font-family: monospace;
+    box-shadow: 0px 1px 7px 1px var(--textColor);
+    color: var(--textColor);
+}
+
+/*Searchbar ends*/
+@media only screen and (max-width:560px){
+    header{
+        display: block;
+    }
+    .navbar{
+        display: block;
+    }
+    .navbar > img{
+        position: absolute;
+        margin-top: 12px;
+        left: 45%;
+        right: 50%;
+        height: 24px;
+        width: 24px;
+    }
+    .navbar-left{
+        display: block;
+    }
+    .navbar-right{
+        top:0;
+        display: block;
+    }
+    .navbar-right > ul{
+        padding: 1px;
+        margin: 0;
+        margin-top: 12px;
+        margin-right: 10px;
+        border: 0.2px solid;
+        border-radius: 999px;
+    }
+    .navbar-right > ul:hover{
+        background-color: #8e8e93;
+    }
+    #themeswitch{
+        padding: 12px;
+    }
+    
+    .navbar-left > ul{
+        display: grid;
+        padding: 2px 9px;
+    }
+    .searchbar{
+        width: 100%;
+        padding-bottom: 12px;
+    }
+    .inputbox{
+        width: 95%;
+        margin: auto;
+    }
+
+    #playlistsearch{
+        display: grid;
+    }
+
+    #artist{
+        width: 120px;
+    }
+}
