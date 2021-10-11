@@ -1,0 +1,14 @@
+[data-theme="light"]{
+    --backgroundColor:white;
+    --textColor:black;
+}
+
+[data-theme="dark"]{
+    --backgroundColor:#181818;
+    --textColor:whitesmoke;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
